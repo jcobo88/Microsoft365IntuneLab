@@ -8,6 +8,28 @@ The lab started with a new Microsoft 365 Business Premium tenant for a fictional
 
 Most changes were first assigned to a small pilot group so I could verify the result before treating the configuration as complete.
 
+### Recruiter Snapshot
+
+| Capability | Verified hands-on work |
+|---|---|
+| Cloud identity | Created Entra ID users and groups, assigned Microsoft 365 Business Premium licenses, and organized pilot groups for controlled testing |
+| Device enrollment | Entra joined and automatically enrolled a Windows 11 virtual machine into Microsoft Intune, then verified the managed device record |
+| Endpoint management | Deployed configuration profiles, Edge settings, firewall compliance, a Windows Update ring, and Windows LAPS |
+| Application delivery | Tested Company Portal deployment and packaged 7-Zip as a required Win32 application, then verified installation on the endpoint |
+| Access control | Evaluated MFA and compliant-device Conditional Access policies in Report-only mode with the What If tool and Entra sign-in logs |
+| Security validation | Confirmed firewall compliance changes, recovery-key escrow for an already encrypted BitLocker device, and LAPS password backup without exposing secrets |
+| Help desk troubleshooting | Reproduced a blocked-user sign-in, diagnosed Entra error 50057 in the sign-in logs, restored access, and verified a successful sign-in |
+
+### Relevance to IT Support, Endpoint Administration, and Security
+
+- Connects the full support path from user identity and licensing through device enrollment, policy delivery, application installation, compliance, and access decisions.
+- Uses pilot assignments, device sync, endpoint checks, policy status, and sign-in logs to verify results before calling a change successful.
+- Distinguishes detection from remediation. For example, the compliance policy reported that the firewall was disabled, while the endpoint still required corrective action before Intune marked it compliant again.
+- Demonstrates safe Conditional Access testing by using Report-only mode and verifying both compliant and noncompliant device scenarios without enforcing a policy that could lock out the tenant.
+- Includes 58 numbered screenshots documenting configuration, failure tests, troubleshooting, recovery, and final validation.
+
+> **Scope:** This is a Microsoft 365 Business Premium lab tenant and Windows 11 virtual machine. The BitLocker volume was already encrypted before policy assignment, so the lab demonstrates policy management, status validation, and recovery-key escrow rather than initial encryption.
+
 ### Main areas covered
 
 - Microsoft 365 administration
